@@ -1,14 +1,68 @@
-//
-//  main.cpp
-//  Unit 5 Lab: Binary Number
-//
-//  Created by Coleton Watt on 10/4/21.
-//
-
 #include <iostream>
-
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+#include <sstream>
+#include "BinaryNumber.hpp"
+using namespace std;
+template<typename Type>
+bool test(string name, Type is, Type shouldBe);
+void testConstructor();void testConversions();
+void testAddition();
+int main(){
+    cout << "BinaryNumber Class Testing: " << endl;
+    testConstructor();
+    testConversions();
+    testAddition();
     return 0;
+    
 }
+void testConstructor(){
+    BinaryNumber b1("1101");
+    stringstream str;
+    str << b1;
+    string name = "Constructor";
+    string ans = "1101";
+    test(name, str.str(), ans);
+    
+}
+void testConversions(){
+    BinaryNumber b1(13);
+    stringstream str;
+    str << b1;
+    string name = "Conversions";
+    string ans = "1101";
+    test(name, str.str(), ans);
+    
+}
+void testAddition(){
+    BinaryNumber b1(13);
+    BinaryNumber b2("1101");
+    BinaryNumber b3 = b1 + b2;
+    stringstream str;    str << b1;
+    string name = "Addition: B1 retains value";
+    string ans = "1101";    test(name, str.str(), ans);
+    str.str("");
+    str << b2;
+    name = "Addition: B2 retains value";
+    ans = "1101";
+    test(name, str.str(), ans);
+    str.str("");
+    str << b3;
+    name = "Addition Operator";
+    ans = "11010";
+    test(name, str.str(), ans);
+    
+}
+template<typename Type>
+bool test(string name, Type is, Type shouldBe){
+    if(is == shouldBe){
+        cout << "Passed: " << name << endl;
+        return true;
+        
+    }
+    else{
+        cout << name << " was " << is << " should have been " << shouldBe << endl;
+        
+    }
+    return false;
+    
+}
+

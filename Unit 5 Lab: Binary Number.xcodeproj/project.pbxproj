@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1DC44037270B419600A3F9DB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1DC44036270B419600A3F9DB /* main.cpp */; };
+		1DC4403F270B429400A3F9DB /* BinaryNumber.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1DC4403D270B429400A3F9DB /* BinaryNumber.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		1DC44033270B419600A3F9DB /* Unit 5 Lab: Binary Number */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Unit 5 Lab: Binary Number"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DC44036270B419600A3F9DB /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		1DC4403D270B429400A3F9DB /* BinaryNumber.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = BinaryNumber.cpp; sourceTree = "<group>"; };
+		1DC4403E270B429400A3F9DB /* BinaryNumber.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BinaryNumber.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				1DC44036270B419600A3F9DB /* main.cpp */,
+				1DC4403D270B429400A3F9DB /* BinaryNumber.cpp */,
+				1DC4403E270B429400A3F9DB /* BinaryNumber.hpp */,
 			);
 			path = "Unit 5 Lab: Binary Number";
 			sourceTree = "<group>";
@@ -120,6 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1DC44037270B419600A3F9DB /* main.cpp in Sources */,
+				1DC4403F270B429400A3F9DB /* BinaryNumber.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
